@@ -1,0 +1,140 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    padding: 0;
+    margin: 0;
+}
+/*-------------------------------- INICIO HEADER ----------------------- ----------------------------------------------------*/
+.header{
+    width: 100%;
+    height: auto;
+    background-color:#abece4;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+    gap: 50px;
+}
+.header .titulo{
+    margin: auto;
+    padding: 0;
+    transform: rotate(-18deg);
+    position: relative;
+    top: 80px;
+    margin-bottom: 50px;
+    height: 150px;
+    font-size: 50px;
+    font-family: "Permanent Marker", cursive;
+    font-weight: 400;
+    font-style: normal;
+    background-color: #ffffff;
+    border-radius: 5%;
+    text-align: center;
+    width: 90%;
+    border: solid 5px transparent;
+    animation: neon 2s infinite alternate;
+    }
+.header .titulo a{
+    text-decoration: none;
+    padding: 0;
+    margin: 0;
+    color:#fb7991;
+}
+@keyframes neon {
+    0% {
+        border-color: #c4d004;
+        box-shadow: 0 0 10px #c4d004, 0 0 20px #c4d004, 0 0 30px #c4d004, 0 0 40px #c4d004;
+    }
+    50% {
+        border-color: #ff1c8d;
+        box-shadow: 0 0 10px #ff1c8d, 0 0 20px #ff1c8d, 0 0 30px #ff1c8d, 0 0 40px #ff1c8d;
+    }
+    100% {
+        border-color: transparent;
+        box-shadow: none;
+    }
+}
+
+.img{
+    padding-top: 50px;
+    height: auto;
+}
+/*-------------------------------- FIN HEADER ---------------------------------------------------------------------------*/
+
+/*-------------------------------- INICIO FOOTER ---------------------------------------------------------------------------*/
+.footer{
+    display: grid;
+    grid-template-columns: 1fr;
+    background-color:#fb7991 ;
+    color: #c4d004;
+}
+.footer__text{
+    font-family: "Roboto", system-ui;
+    font-weight: 100;
+    font-style: normal;
+    font-size: 10px;
+    display: flex;
+    justify-content: center;
+}
+.footer__icon{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    justify-items: center;
+    margin-top: 30xp;
+    margin-bottom: 30xp;
+}
+
+/*-------------------------------- FIN FOOTER ---------------------------------------------------------------------------*/
+
+/*-------------------------------- MOMENTO RESPONSIVE -------------------------------------------------------------------------*/
+
+@media (min-width: 768px) and (max-width: 991px){
+    .header .titulo{
+        padding: 0;
+        margin: 0;
+        text-align: justify;
+        font-size: 45px;
+        width: auto;
+        height: 100px;
+    }
+    .header{
+        display: flex;
+        justify-content: space-evenly;
+    }
+    .img{
+        transform: scale(1.1);
+        position: relative;
+        top: -15px;
+        left: 150px;
+    }
+}
+@media (min-width: 992px){
+    .header .titulo{
+        padding: 0;
+        margin: 0;
+        text-align: justify;
+        font-size: 65px;
+        width: auto;
+        height: 100px;
+        position: relative;
+        top: 70px;
+        left: 0;
+    }
+    .header{
+        display: flex;
+        flex-direction: row;
+        height: 750px;
+        width: 100%;
+    }
+    .img{
+        transform: scale(2.5);
+        position: relative;
+        top: -65px;
+        left: 100px;
+    }
+}
+/*-------------------------------- MOMENTO RESPONSIVE -------------------------------------------------------------------------*/
